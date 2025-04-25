@@ -1,0 +1,9 @@
+# Sistema-de-validacion.md
+Producto = input("producto:")
+precio = float (input("precio:"))
+cantidad = int (input("cantidad:"))
+Descuento = int (input("descuento:"))
+monto_descuento = (Descuento / 100) * precio
+precio_final = precio - monto_descuento
+
+print(f"su prodcuto es, {Producto} su precio es; {precio} la cantidad;
