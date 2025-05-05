@@ -1,9 +1,24 @@
-# Sistema-de-validacion.md
-Producto = input("producto:")
-precio = float (input("precio:"))
-cantidad = int (input("cantidad:"))
-Descuento = int (input("descuento:"))
-monto_descuento = (Descuento / 100) * precio
-precio_final = precio - monto_descuento
+print("=== Calculadora de Compras ===")
 
-print(f"su prodcuto es, {Producto} su precio es; {precio} la cantidad;
+# Entrada de datos
+nombre_producto = input("Ingrese el nombre del producto: ")
+precio_unitario = float(input("Ingrese el precio unitario: "))
+cantidad = int(input("Ingrese la cantidad de productos: "))
+descuento = float(input("Ingrese el porcentaje de descuento (0 a 100): "))
+
+# Cálculos
+subtotal = precio_unitario * cantidad
+monto_descuento = subtotal * (descuento / 100)
+total = subtotal - monto_descuento
+
+# Salida de resultados
+print("\n=== RESUMEN DE LA COMPRA ===")
+print("Producto:", nombre_producto)
+print("Precio unitario: $", round(precio_unitario, 2))
+print("Cantidad:", cantidad)
+print("Subtotal: $", round(subtotal, 2))
+print("Descuento:", str(descuento) + "%")
+print("Monto de descuento: $", round(monto_descuento, 2))
+print("TOTAL A PAGAR: $", round(total, 2))
+
+print("\nGracias por su compra.")
